@@ -23,7 +23,7 @@ namespace No.StoreButler.LedgerManagement.LedgerManagement
         /// <summary>
         /// 支付金额
         /// </summary>
-        public long PayAmount { get; set; }
+        public decimal PayAmount { get; set; }
 
         /// <summary>
         /// 资金流动类型

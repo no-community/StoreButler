@@ -19,7 +19,7 @@ namespace No.StoreButler.LedgerManagement.LedgerManagement.Dtos
         /// <summary>
         /// 金额
         /// </summary>
-        public long PayAmount { get; set; }
+        public decimal PayAmount { get; set; }
 
         /// <summary>
         /// 资金流向
