@@ -53,34 +53,36 @@ namespace No.StoreButler.LedgerManagement.LedgerManagement
         {
         }
 
-        public PayTrade(
-            Guid id,
-            PaymentMethod payMethod,
-            TradeStatus tradeStatus,
-            long payAmount,
-            PayFlowType payFlowType,
-            Guid? tenantId,
-            DateTime creationTime,
-            Guid? creatorId,
-            DateTime? lastModificationTime,
-            Guid? lastModifierId,
-            bool isDeleted,
-            DateTime? deletionTime,
-            Guid? deleterId
-        ) : base(id)
+        /// <summary>
+        /// 交易创建
+        /// </summary>
+        public void TradeCreate()
         {
-            PayMethod = payMethod;
-            TradeStatus = tradeStatus;
-            PayAmount = payAmount;
-            PayFlowType = payFlowType;
-            TenantId = tenantId;
-            CreationTime = creationTime;
-            CreatorId = creatorId;
-            LastModificationTime = lastModificationTime;
-            LastModifierId = lastModifierId;
-            IsDeleted = isDeleted;
-            DeletionTime = deletionTime;
-            DeleterId = deleterId;
+            TradeStatus = TradeStatus.WaitBuyerPay;
+        }
+
+        /// <summary>
+        /// 交易关闭
+        /// </summary>
+        public void TradeClose()
+        {
+            TradeStatus = TradeStatus.Close;
+        }
+
+        /// <summary>
+        /// 交易成功
+        /// </summary>
+        public void TradeSuccess()
+        {
+            TradeStatus = TradeStatus.Success;
+        }
+
+        /// <summary>
+        /// 交易完成
+        /// </summary>
+        public void TradeFinished()
+        {
+            TradeStatus = TradeStatus.Finished;
         }
     }
 }
