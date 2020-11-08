@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>No.StoreButler.LedgerManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.MongoDB" Version="3.3.1" />
+    <ProjectReference Include="..\No.StoreButler.LedgerManagement.Domain\No.StoreButler.LedgerManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

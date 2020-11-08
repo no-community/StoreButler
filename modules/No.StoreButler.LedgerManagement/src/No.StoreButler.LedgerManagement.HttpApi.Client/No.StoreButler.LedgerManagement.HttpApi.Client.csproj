@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>No.StoreButler.LedgerManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Http.Client" Version="3.3.1" />
+    <ProjectReference Include="..\No.StoreButler.LedgerManagement.Application.Contracts\No.StoreButler.LedgerManagement.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

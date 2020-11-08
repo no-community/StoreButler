@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>No.StoreButler.LedgerManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.9" />
+    <ProjectReference Include="..\..\src\No.StoreButler.LedgerManagement.EntityFrameworkCore\No.StoreButler.LedgerManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\No.StoreButler.LedgerManagement.TestBase\No.StoreButler.LedgerManagement.TestBase.csproj" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="3.3.1" />
+  </ItemGroup>
+
+</Project>

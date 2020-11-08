@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>No.StoreButler.LedgerManagement</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DocumentationFile>bin\Debug\No.StoreButler.LedgerManagement.HttpApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>bin\Release\No.StoreButler.LedgerManagement.HttpApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="3.3.1" />
+    <ProjectReference Include="..\No.StoreButler.LedgerManagement.Application.Contracts\No.StoreButler.LedgerManagement.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

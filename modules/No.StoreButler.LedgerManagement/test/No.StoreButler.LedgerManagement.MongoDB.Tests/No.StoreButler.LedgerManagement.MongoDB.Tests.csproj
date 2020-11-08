@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>No.StoreButler.LedgerManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="Mongo2Go" Version="2.2.14" />
+    <ProjectReference Include="..\..\src\No.StoreButler.LedgerManagement.MongoDB\No.StoreButler.LedgerManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\No.StoreButler.LedgerManagement.TestBase\No.StoreButler.LedgerManagement.TestBase.csproj" />
+  </ItemGroup>
+
+</Project>

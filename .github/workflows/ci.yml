@@ -1,0 +1,40 @@
+name: ci
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy-image:
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取分支
+      - uses: actions/checkout@v1
+
+      # 缓存 Nuget
+      - name: Cache Nuget
+        uses: actions/cache@v2
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+      
+      # 登陆镜像仓库
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          registry: registry.cn-hongkong.aliyuncs.com
+          username: ${{ secrets.DOCKERIMAGE_USERNAME }}
+          password: ${{ secrets.DOCKERIMAGE_TOKEN }}
+
+      # 设置 dotnet sdk
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+
+      # 编译并且推送到镜像仓库
+      - name: Build and push
+        working-directory: scripts
+        shell: pwsh
+        run: ./build-and-push-all-images.ps1 
