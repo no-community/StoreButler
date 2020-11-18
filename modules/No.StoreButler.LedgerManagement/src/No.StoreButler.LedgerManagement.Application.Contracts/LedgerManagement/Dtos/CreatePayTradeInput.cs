@@ -1,6 +1,6 @@
 using System;
 
-namespace No.StoreButler.LedgerManagement.LedgerManagement.Dtos
+namespace No.StoreButler.LedgerManagement.LedgerManagement.DTOs
 {
     [Serializable]
     public class CreatePayTradeInput
@@ -24,5 +24,10 @@ namespace No.StoreButler.LedgerManagement.LedgerManagement.Dtos
         /// 分类 Id
         /// </summary>
         public Guid TradeCategoryId { get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Remarks { get; set; }
     }
 }

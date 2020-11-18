@@ -40,6 +40,11 @@ namespace No.StoreButler.LedgerManagement.LedgerManagement
         /// </summary>
         public TradeCategory TradeCategory { get; set; }
 
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Remarks { get; set; }
+
         public Guid? TenantId { get; }
         public DateTime CreationTime { get; set; }
         public Guid? CreatorId { get; set; }

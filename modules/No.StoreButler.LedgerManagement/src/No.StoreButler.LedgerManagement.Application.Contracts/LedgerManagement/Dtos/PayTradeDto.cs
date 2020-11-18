@@ -1,10 +1,9 @@
 using System;
-using Volo.Abp.Application.Dtos;
 
-namespace No.StoreButler.LedgerManagement.LedgerManagement.Dtos
+namespace No.StoreButler.LedgerManagement.LedgerManagement.DTOs
 {
     [Serializable]
-    public class PayTradeDto : EntityDto<Guid>
+    public class PayTradeDto
     {
         /// <summary>
         /// 支付交易 Id
@@ -30,5 +29,15 @@ namespace No.StoreButler.LedgerManagement.LedgerManagement.Dtos
         /// 交易状态： 0=等待顾客付款 1=未付款交易超时关闭，或支付完成后全额退款 2=交易支付成功，可退款 3=交易结束，不可退款
         /// </summary>
         public TradeStatus TradeStatus { get; set; }
+
+        /// <summary>
+        /// 交易分类
+        /// </summary>
+        public string TradeCategoryName { get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Remarks { get; set; }
     }
 }

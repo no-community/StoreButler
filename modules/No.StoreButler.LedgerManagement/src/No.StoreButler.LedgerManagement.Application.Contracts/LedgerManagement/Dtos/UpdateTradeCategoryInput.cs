@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace No.StoreButler.LedgerManagement.LedgerManagement.Dtos
+namespace No.StoreButler.LedgerManagement.LedgerManagement.DTOs
 {
     [Serializable]
     public class UpdateTradeCategoryInput

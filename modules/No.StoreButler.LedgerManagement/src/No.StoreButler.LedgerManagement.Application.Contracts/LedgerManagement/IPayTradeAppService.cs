@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using No.StoreButler.LedgerManagement.LedgerManagement.Dtos;
+using No.StoreButler.LedgerManagement.LedgerManagement.DTOs;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 

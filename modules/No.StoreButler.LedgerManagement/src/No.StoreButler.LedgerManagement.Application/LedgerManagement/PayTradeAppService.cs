@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using No.StoreButler.LedgerManagement.LedgerManagement.Dtos;
+using No.StoreButler.LedgerManagement.LedgerManagement.DTOs;
 using Volo.Abp;
 using Volo.Abp.Application.Dtos;
 
@@ -67,7 +67,7 @@ namespace No.StoreButler.LedgerManagement.LedgerManagement
         /// <returns></returns>
         public async Task<PayTradeDto> GetAsync(Guid id)
         {
-            var payTransaction = await _payTradeRepo.GetAsync(id);
+            var payTransaction = await _payTradeRepo.GetAsync(id,true);
 
             return ObjectMapper.Map<PayTrade, PayTradeDto>(payTransaction);
         }
@@ -80,7 +80,7 @@ namespace No.StoreButler.LedgerManagement.LedgerManagement
         public async Task<PagedResultDto<PayTradeDto>> GetAsync(GetPayTradeInput input)
         {
             var tradeCategories =
-                await _payTradeRepo.GetPagedListAsync(input.SkipCount, input.MaxResultCount, input.Sorting);
+                await _payTradeRepo.GetPagedListAsync(input.SkipCount, input.MaxResultCount, input.Sorting, true);
             var totalCount = await _payTradeRepo.GetCountAsync();
 
             var payTransactionDtos = ObjectMapper.Map<List<PayTrade>, List<PayTradeDto>>(tradeCategories);

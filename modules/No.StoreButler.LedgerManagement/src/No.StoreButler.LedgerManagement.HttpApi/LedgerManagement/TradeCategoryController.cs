@@ -1,5 +1,5 @@
 using System;
-using No.StoreButler.LedgerManagement.LedgerManagement.Dtos;
+using No.StoreButler.LedgerManagement.LedgerManagement.DTOs;
 using Volo.Abp.Application.Dtos;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
