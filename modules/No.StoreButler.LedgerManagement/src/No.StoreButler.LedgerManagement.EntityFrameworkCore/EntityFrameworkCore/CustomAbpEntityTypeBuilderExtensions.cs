@@ -61,10 +61,10 @@ namespace No.StoreButler.LedgerManagement.EntityFrameworkCore
                 return;
             }
 
-            b.Property<Dictionary<string, object>>(nameof(IHasExtraProperties.ExtraProperties))
+            b.Property<ExtraPropertyDictionary>(nameof(IHasExtraProperties.ExtraProperties))
                 .HasColumnName("extra_properties")
                 .HasConversion(new ExtraPropertiesValueConverter(b.Metadata.ClrType))
-                .Metadata.SetValueComparer(new AbpDictionaryValueComparer<string, object>());
+                .Metadata.SetValueComparer(new ExtraPropertyDictionaryValueComparer());
 
             b.TryConfigureObjectExtensions();
         }

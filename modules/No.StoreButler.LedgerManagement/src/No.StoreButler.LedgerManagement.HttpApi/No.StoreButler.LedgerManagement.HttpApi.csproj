@@ -3,7 +3,7 @@
   <Import Project="..\..\common.props" />
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>No.StoreButler.LedgerManagement</RootNamespace>
   </PropertyGroup>
 
@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.0.1" />
     <ProjectReference Include="..\No.StoreButler.LedgerManagement.Application.Contracts\No.StoreButler.LedgerManagement.Application.Contracts.csproj" />
   </ItemGroup>
 

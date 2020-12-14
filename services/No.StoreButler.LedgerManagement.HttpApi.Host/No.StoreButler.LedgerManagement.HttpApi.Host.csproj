@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -13,22 +13,22 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="3.3.1" />
-        <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="3.3.1" />
-        <PackageReference Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="3.3.1" />
-        <PackageReference Include="Volo.Abp.Autofac" Version="3.3.1" />
-        <PackageReference Include="Volo.Abp.EntityFrameworkCore.PostgreSql" Version="3.3.1" />
-        <PackageReference Include="Volo.Abp.Identity.EntityFrameworkCore" Version="3.3.1" />
-        <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="3.3.1" />
-        <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="3.3.1" />
-        <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="3.3.1" />
+        <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="4.0.1" />
+        <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.0.1" />
+        <PackageReference Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="4.0.1" />
+        <PackageReference Include="Volo.Abp.Autofac" Version="4.0.1" />
+        <PackageReference Include="Volo.Abp.EntityFrameworkCore.PostgreSql" Version="4.0.1" />
+        <PackageReference Include="Volo.Abp.Identity.EntityFrameworkCore" Version="4.0.1" />
+        <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="4.0.1" />
+        <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="4.0.1" />
+        <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="4.0.1" />
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="AspNetCore.DataProtection.CSRedis" Version="0.2.0" />
-        <PackageReference Include="Caching.CSRedis" Version="3.6.5" />
-        <PackageReference Include="DotNetCore.CAP.Dashboard" Version="3.1.1" />
-        <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="3.1.1" />
+        <PackageReference Include="Caching.CSRedis" Version="3.6.50" />
+        <PackageReference Include="DotNetCore.CAP.Dashboard" Version="3.1.2" />
+        <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="3.1.2" />
         <PackageReference Include="EasyAbp.Abp.EventBus.CAP" Version="3.3.0" />
         <PackageReference Include="EasyAbp.Abp.EventBus.CAP.PostgreSql" Version="3.3.0" />
         <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="3.1.9" />
@@ -39,10 +39,6 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
         <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
         <PackageReference Include="Tfc.CAP.AliyunAMQP" Version="1.0.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Folder Include="Properties" />
     </ItemGroup>
 
     <ItemGroup>

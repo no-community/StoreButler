@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using No.StoreButler.LedgerManagement.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -10,9 +11,10 @@ using Volo.Abp.EntityFrameworkCore;
 namespace No.StoreButler.LedgerManagement.Migrations
 {
     [DbContext(typeof(LedgerManagementHttpApiHostMigrationsDbContext))]
-    partial class LedgerManagementHttpApiHostMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201214152850_upgrade-to-5.0")]
+    partial class upgradeto50
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -6579,7 +6579,7 @@ var luxon = (function (exports) {
     }
     /**
      * Create a DateTime from an HTTP header date
-     * @see https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1
+     * @see https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec4.0.1
      * @param {string} text - the HTTP header date
      * @param {Object} opts - options to affect the creation
      * @param {string|Zone} [opts.zone='local'] - convert the time to this zone. Since HTTP dates are always in UTC, this has no effect on the interpretation of string, merely the zone the resulting DateTime is expressed in.
@@ -7211,7 +7211,7 @@ var luxon = (function (exports) {
     /**
      * Returns a string representation of this DateTime appropriate for use in HTTP headers.
      * Specifically, the string conforms to RFC 1123.
-     * @see https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1
+     * @see https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec4.0.1
      * @example DateTime.utc(2014, 7, 13).toHTTP() //=> 'Sun, 13 Jul 2014 00:00:00 GMT'
      * @example DateTime.utc(2014, 7, 13, 19).toHTTP() //=> 'Sun, 13 Jul 2014 19:00:00 GMT'
      * @return {string}
