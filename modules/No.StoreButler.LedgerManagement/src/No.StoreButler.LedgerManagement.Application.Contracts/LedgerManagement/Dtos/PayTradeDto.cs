@@ -39,5 +39,10 @@ namespace No.StoreButler.LedgerManagement.LedgerManagement.DTOs
         /// 备注
         /// </summary>
         public string Remarks { get; set; }
+        
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime CreationTime { get; set; }
     }
 }
