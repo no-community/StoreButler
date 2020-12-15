@@ -31,7 +31,7 @@ jobs:
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '3.1.x'
+          dotnet-version: '5.0.x'
 
       # 编译并且推送到镜像仓库
       - name: Build and push
