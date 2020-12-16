@@ -6,10 +6,6 @@ namespace No.StoreButler.LedgerManagement.LedgerManagement.DTOs
     [Serializable]
     public class TradeCategoryDto : EntityDto<Guid>
     {
-        /// <summary>
-        /// 分类 ID
-        /// </summary>
-        public Guid Id { get; set; }
         
         /// <summary>
         /// 名称
