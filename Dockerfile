@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:5.0.1-buster-slim
+FROM mcr.microsoft.com/dotnet/aspnet:5.0.1-buster-slim
 ARG PROJECT
 ARG TARGETDIR
 WORKDIR /app
